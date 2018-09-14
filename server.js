@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // az app a / győkérben a this is working választ kapja
-app.get('/', (req, res) => {res.send(database.users);})
+app.get('/', (req, res) => {res.send('it is working');})
 // Sign in útvonal
 app.post('/signin', signin.handleSignin(db,bcrypt))
 // Register útvonal
