@@ -41,6 +41,6 @@ app.post('/imageurl', (req, res) => {image.handleApiCall(req,res)})
 
 // az app vagyis az express szerver a 3000-es protot figyeli, 
 //a függvény a terminálban ezt közli
-app.listen(3001, () => {
-	console.log('app is running on port 3001');
+app.listen(process.env.PORT || 3001, () => {
+	console.log(`app is running on port ${process.env.PORT}`);
 })
